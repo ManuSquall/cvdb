@@ -1,0 +1,75 @@
+{include file='src/view/header.html'}
+
+<!-- SQUALL -->
+
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                            <div class="page-header">
+
+
+                                <h2 class="pageheader-title " align="center"><u>Liste des CV</u></h2>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+
+
+
+                    <!-- ############################################################################################## -->
+
+
+                    <!-- recent orders  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <a href="{$url_base}Achat/form_achat" class="btn btn-primary"><i class="fas fa-user-plus"></i>
+                            Ajouter un Cv</a>
+                        <div class="card">
+
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="bg-light">
+                                            <tr class="border-0">
+                                                <th>ID</th>
+                                                <th>Nom</th>
+                                                <th>Ville</th>
+                                                <th>Domaine</th>
+                                                <th>Détails</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <!-- {foreach from = $listeAchat item= achat}
+                                            <tr>
+                                                <td> {$achat->getId()} </td>
+                                                <td> {$achat->getDate()} </td>
+                                                <td> {$achat->getProduit()} </td>
+                                                <td> {$achat->getQte()} </td>
+                                                <td> {$achat->getPrix()} </td>
+
+                                            </tr>
+                                            {/foreach} -->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end recent orders  -->
+
+                    <!-- /SQUALL -->
+
+{include file='src/view/footer.html'}
