@@ -1,0 +1,52 @@
+<?php
+/*==================================================
+MODELE MVC DEVELOPPE PAR Ngor SECK
+samane@samanemvc.sn
+(+221) 77 - 433 - 97 - 16
+PERFECTIONNEZ CE MODELE ET FAITES MOI UN RETOUR
+POUR TOUTE MODIFICATION VISANT A L'AMELIORER.
+VOUS ETES LIBRE DE TOUTE UTILISATION.
+===================================================*/
+namespace src\model;
+
+use libs\system\Model;
+
+class DomaineRepository extends Model
+{
+    public function __construct()
+    {
+        parent::__construct();
+    }
+    /**
+	 * Methods with DQL (Doctrine Query Language) 
+	 */
+    public function getAll()
+    {
+        return $this->db->getRepository("Domaine")->findAll();
+    }
+    public function get($id)
+    {
+        return $this->db->getRepository("Domaine")->find(array("id"=>$id));
+    }
+    public function insert($domaine)
+    {
+        $this->db->persist($domaine);
+        $this->db->flush();
+    }
+    public function update($domaine)
+    {
+        //La vill de la base de donnees
+        $v = $this->get($domaine->getId());
+        $v->setLibelle($domaine->getLibelle());
+
+        $this->db->flush();
+    }
+
+    public function delete($id)
+    {
+        $p = $this->get($id);
+
+        $this->db->remove($p);
+        $this->db->flush();
+    }
+}

@@ -325,12 +325,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "62201f99a4fcbbb51baa747c7260bc8a0131c2f2"
+                "reference": "f3e8dfb03f78124e83a101ddfd1bc6c72242bf8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/62201f99a4fcbbb51baa747c7260bc8a0131c2f2",
-                "reference": "62201f99a4fcbbb51baa747c7260bc8a0131c2f2",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/f3e8dfb03f78124e83a101ddfd1bc6c72242bf8e",
+                "reference": "f3e8dfb03f78124e83a101ddfd1bc6c72242bf8e",
                 "shasum": ""
             },
             "require": {
@@ -425,7 +425,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-13T06:30:38+00:00"
+            "time": "2020-05-21T11:06:45+00:00"
         },
         {
             "name": "doctrine/event-manager",
