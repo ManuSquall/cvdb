@@ -10,11 +10,15 @@ class VilleController extends Controller
         parent::__construct();
     }
 
-    public function liste()
+    public function list()
     {
         $villedb = new VilleRepository();
         $data["listeville"] = $villedb->getAll();
         return $this->view->load("ville/list", $data);
+    }
+
+    public function add(){
+        return $this->view->load("ville/add");
     }
 
     public function insert()
@@ -27,7 +31,7 @@ class VilleController extends Controller
         $villedb = new VilleRepository();
         $villedb->insert($ville);
 
-        return $this->liste();
+        return $this->list();
     }
 
     public function edit($id)
@@ -48,7 +52,7 @@ class VilleController extends Controller
         $villedb = new VilleRepository();
         $villedb->update($ville);
 
-        return $this->liste();
+        return $this->list();
     }
 
     public function delete($id)
@@ -56,7 +60,7 @@ class VilleController extends Controller
         $villedb = new VilleRepository();
         $villedb->delete($id);
 
-        return $this->liste();
+        return $this->list();
     }
 }
 ?>

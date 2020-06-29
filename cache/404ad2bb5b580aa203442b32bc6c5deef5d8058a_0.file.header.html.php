@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-05-21 09:42:14
+/* Smarty version 3.1.30, created on 2020-06-29 13:05:27
   from "/opt/lampp/htdocs/projects/cvdb/src/view/header.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5ec630d601c671_71121643',
+  'unifunc' => 'content_5ef9caf70e66d7_44632617',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '404ad2bb5b580aa203442b32bc6c5deef5d8058a' => 
     array (
       0 => '/opt/lampp/htdocs/projects/cvdb/src/view/header.html',
-      1 => 1590046930,
+      1 => 1590144615,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ec630d601c671_71121643 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ef9caf70e66d7_44632617 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
@@ -70,7 +70,8 @@ function content_5ec630d601c671_71121643 (Smarty_Internal_Template $_smarty_tpl)
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../Admin/connect">GEST CV</a>
+                <a class="navbar-brand" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+">GEST CV</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -113,10 +114,12 @@ function content_5ec630d601c671_71121643 (Smarty_Internal_Template $_smarty_tpl)
                                 <div id="submenu-1" class="collapse submenu" >
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../Client/add_client">Ajouter</a>
+                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Demandeur/add">Ajouter</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../Client/list_client">Modifier/Supprimer</a>
+                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Demandeur/list">Gestion</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -135,13 +138,12 @@ function content_5ec630d601c671_71121643 (Smarty_Internal_Template $_smarty_tpl)
                                 <div id="submenu-2" class="collapse submenu" >
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../Compte/add_compte">Ajouter</a>
+                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Domaine/add">Ajouter</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../Compte/list_compte">Lister</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="../Compte/list_compte">Modifier/Supprimer</a>
+                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Domaine/list">Gestion</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -160,13 +162,12 @@ function content_5ec630d601c671_71121643 (Smarty_Internal_Template $_smarty_tpl)
                                 <div id="submenu-3" class="collapse submenu" >
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../Compte/add_compte">Ajouter</a>
+                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Ville/add">Ajouter</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../Compte/list_compte">Lister</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="../Compte/list_compte">Modifier/Supprimer</a>
+                                            <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+Ville/list">Gestion</a>
                                         </li>
                                     </ul>
                                 </div>
