@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-06-30 01:44:02
-  from "/opt/lampp/htdocs/projects/cvdb/src/view/ville/edit.html" */
+/* Smarty version 3.1.30, created on 2020-06-30 01:25:16
+  from "/opt/lampp/htdocs/projects/cvdb/src/view/domaine/edit.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5efa7cc27d7573_05176105',
+  'unifunc' => 'content_5efa785ce1ee11_25625333',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'eb127f5628e32b07d8fc7acc0f76ad27f09c3085' => 
+    '9b354d1dc161ea339eb80306d13e0c82828f13d9' => 
     array (
-      0 => '/opt/lampp/htdocs/projects/cvdb/src/view/ville/edit.html',
-      1 => 1593474239,
+      0 => '/opt/lampp/htdocs/projects/cvdb/src/view/domaine/edit.html',
+      1 => 1593473067,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:src/view/footer.html' => 1,
   ),
 ),false)) {
-function content_5efa7cc27d7573_05176105 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efa785ce1ee11_25625333 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,12 +34,12 @@ $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cach
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
         <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-/Ville/list" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
+/Domaine/list" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
 
         <div class="page-header">
 
 
-            <h2 class="pageheader-title " align="center">Modifier une ville</h2>
+            <h2 class="pageheader-title " align="center">Modifier un domaine</h2>
 
 
 
@@ -65,15 +65,13 @@ $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cach
 <div class="splash-container">
     <div class="card ">
         <div class="card-body">
-            <form action="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-/Ville/update" method="post" class="needs-validation">
+            <form action="update" method="post" class="needs-validation">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                        <input class="form-control" readonly type="text" name="id" id="id" value="<?php echo $_smarty_tpl->tpl_vars['ville']->value->getId();?>
+                        <input class="form-control" readonly type="text" name="id" value="<?php echo $_smarty_tpl->tpl_vars['domaine']->value->getId();?>
 "/>
                         <label for="libelle">Libelle</label>
-                        <input type="text" class="form-control" name="libelle" id="libelle" value="<?php echo $_smarty_tpl->tpl_vars['ville']->value->getLibelle();?>
-" required>
+                        <input type="text" class="form-control" name="libelle" id="libelle" required>
 
                     </div>
                     

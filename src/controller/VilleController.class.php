@@ -38,11 +38,12 @@ class VilleController extends Controller
     {
         $villedb = new VilleRepository();
         $data["ville"] = $villedb->get($id);
-        $data["listeville"] = $villedb->getAll();
+        // $data["listeville"] = $villedb->getAll();
         return $this->view->load("ville/edit", $data);
     }
     public function update()
     {
+        
         extract($_POST);
         $ville = new Ville();
         $ville->setId($id);
@@ -52,6 +53,7 @@ class VilleController extends Controller
         $villedb = new VilleRepository();
         $villedb->update($ville);
 
+        
         return $this->list();
     }
 

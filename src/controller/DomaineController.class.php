@@ -10,11 +10,15 @@ class DomaineController extends Controller
         parent::__construct();
     }
 
-    public function liste()
+    public function list()
     {
         $domainedb = new DomaineRepository();
         $data["listedomaine"] = $domainedb->getAll();
         return $this->view->load("domaine/list", $data);
+    }
+
+    public function add(){
+        return $this->view->load("domaine/add");
     }
 
     public function insert()
@@ -27,14 +31,14 @@ class DomaineController extends Controller
         $domainedb = new DomaineRepository();
         $domainedb->insert($domaine);
 
-        return $this->liste();
+        return $this->list();
     }
 
     public function edit($id)
     {
         $domainedb = new DomaineRepository();
         $data["domaine"] = $domainedb->get($id);
-        $data["listedomaine"] = $domainedb->getAll();
+        // $data["listedomaine"] = $domainedb->getAll();
         return $this->view->load("domaine/edit", $data);
     }
     public function update()
@@ -48,7 +52,7 @@ class DomaineController extends Controller
         $domainedb = new DomaineRepository();
         $domainedb->update($domaine);
 
-        return $this->liste();
+        return $this->list();
     }
 
     public function delete($id)
@@ -56,7 +60,7 @@ class DomaineController extends Controller
         $domainedb = new DomaineRepository();
         $domainedb->delete($id);
 
-        return $this->liste();
+        return $this->list();
     }
 }
 ?>

@@ -37,12 +37,12 @@
 <div class="splash-container">
     <div class="card ">
         <div class="card-body">
-            <form action="update" method="post" class="needs-validation">
+            <form action="{$url_base}/Ville/update" method="post" class="needs-validation">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                        <input class="form-control" readonly type="text" name="id" value="{$ville->getId()}"/>
+                        <input class="form-control" readonly type="text" name="id" id="id" value="{$ville->getId()}"/>
                         <label for="libelle">Libelle</label>
-                        <input type="text" class="form-control" name="libelle" id="libelle" required>
+                        <input type="text" class="form-control" name="libelle" id="libelle" value="{$ville->getLibelle()}" required>
 
                     </div>
                     
