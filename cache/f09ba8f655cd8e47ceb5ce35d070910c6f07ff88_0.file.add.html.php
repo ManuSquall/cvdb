@@ -1,11 +1,39 @@
-{include file='src/view/header.html'}
+<?php
+/* Smarty version 3.1.30, created on 2020-07-01 01:44:43
+  from "/opt/lampp/htdocs/projects/cvdb/src/view/demandeur/add.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5efbce6bce0fd3_62920385',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f09ba8f655cd8e47ceb5ce35d070910c6f07ff88' => 
+    array (
+      0 => '/opt/lampp/htdocs/projects/cvdb/src/view/demandeur/add.html',
+      1 => 1593560672,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:src/view/header.html' => 1,
+    'file:src/view/footer.html' => 1,
+  ),
+),false)) {
+function content_5efbce6bce0fd3_62920385 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 
 <!-- pageheader  -->
 <!-- ============================================================== -->
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-        <a href="{$url_base}/Ville/list" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+/Ville/list" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
 
         <div class="page-header">
 
@@ -60,11 +88,22 @@
                             <label for="input-select">Profil</label>
                             <select name="id_profil" class="form-control" id="input-select" required>
                                 <option value="">-Selectionner un profil-</option>
-                                {foreach from = $listeProfil item= profil}
+                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeProfil']->value, 'profil');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['profil']->value) {
+?>
 
-                                <option value="{$profil->getId()}"> {$profil->getLibelle()}
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['profil']->value->getId();?>
+"> <?php echo $_smarty_tpl->tpl_vars['profil']->value->getLibelle();?>
+
                                 </option>
-                                {/foreach}
+                                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 
                             </select>
                         </div>
@@ -95,12 +134,23 @@
                                 <option value="">-Selectionner une ville-</option>
 
 
-                                {foreach from = $listeVille item= ville}
+                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeVille']->value, 'ville');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['ville']->value) {
+?>
 
-                                <option value="{$ville->getId()}"> {$ville->getLibelle()}
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['ville']->value->getId();?>
+"> <?php echo $_smarty_tpl->tpl_vars['ville']->value->getLibelle();?>
+
                                 </option>
 
-                                {/foreach}
+                                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 
                             </select>
                         </div>
@@ -117,12 +167,23 @@
                                 <option value="">-Selectionner un domaine-</option>
 
 
-                                {foreach from = $listeDomaine item= domaine}
+                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeDomaine']->value, 'domaine');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['domaine']->value) {
+?>
 
-                                <option value="{$domaine->getId()}"> {$domaine->getLibelle()}
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['domaine']->value->getId();?>
+"> <?php echo $_smarty_tpl->tpl_vars['domaine']->value->getLibelle();?>
+
                                 </option>
 
-                                {/foreach}
+                                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 
                             </select>
                         </div>
@@ -184,4 +245,6 @@
     </div>
 </div>
 
-{include file='src/view/footer.html'}
+<?php $_smarty_tpl->_subTemplateRender("file:src/view/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}
