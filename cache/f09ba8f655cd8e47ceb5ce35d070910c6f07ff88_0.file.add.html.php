@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-07-01 01:44:43
+/* Smarty version 3.1.30, created on 2020-07-01 22:41:43
   from "/opt/lampp/htdocs/projects/cvdb/src/view/demandeur/add.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5efbce6bce0fd3_62920385',
+  'unifunc' => 'content_5efcf507af0909_47244689',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f09ba8f655cd8e47ceb5ce35d070910c6f07ff88' => 
     array (
       0 => '/opt/lampp/htdocs/projects/cvdb/src/view/demandeur/add.html',
-      1 => 1593560672,
+      1 => 1593634966,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:src/view/footer.html' => 1,
   ),
 ),false)) {
-function content_5efbce6bce0fd3_62920385 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efcf507af0909_47244689 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -33,7 +33,7 @@ $_smarty_tpl->_subTemplateRender("file:src/view/header.html", $_smarty_tpl->cach
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
         <a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-/Ville/list" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
+/Demandeur/list" class="btn btn-primary"> <i class="fas fa-arrow-left"></i> </a>
 
         <div class="page-header">
 
@@ -223,6 +223,25 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                         </div>
                     </div>
                     <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    
+                        <div class="custom-file mb-3">
+                            <input type="file" class="custom-file-input" name="cv" id="customFile">
+                            <label class="custom-file-label" for="customFile">Ajouter un CV</label>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    
+                        <div class="custom-file mb-3">
+                            <input type="file" class="custom-file-input" name="photo" id="customFile">
+                            <label class="custom-file-label" for="customFile">Ajouter une photo</label>
+                        </div>
+                    </div>
                     <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                         <label for="tel">Telephone</label>
                         <input type="text" class="form-control" name="tel" id="tel" required>
